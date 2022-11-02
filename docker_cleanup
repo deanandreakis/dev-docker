@@ -1,0 +1,12 @@
+1. stop the container: docker stop <container_name>
+2. remove the container: docker rm <container_name>
+3. remove the image: docker rmi <image_id>
+
+Notes:
+
+1. docker ps # lists containers
+2. docker images # lists images
+3. docker build --rm -f Dockerfile -t ubuntu:dean . # builds the image from the Dockerfile
+4. docker run -it <image_id> /bin/zsh # creates and starts a container w/ the given image_id in the zsh
+5. docker start <container_name> # start a container
+6. docker exec -it <container_name> /bin/zsh # attach to running container w/ zsh
