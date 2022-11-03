@@ -31,3 +31,28 @@ RUN brew install ripgrep
 RUN brew install neovim 
 RUN brew install tmux 
 RUN brew install fzf
+RUN brew install fd openssl wget
+
+# Install Languages
+RUN brew install python 
+RUN brew install perl 
+RUN brew install rbenv
+RUN brew install ruby-build 
+RUN brew install lua 
+RUN brew install node 
+RUN brew install gcc 
+RUN brew install rust 
+RUN brew install swift 
+RUN brew install kotlin
+
+# Install Fonts
+RUN sudo apt-get install -y fonts-hack-ttf
+
+# Setup Dot Files
+RUN mkdir -p /home/devuser/git && \
+chown -R devuser: /home/devuser/git
+RUN mkdir -p /home/devuser/git/MyDotFiles && \
+chown -R devuser: /home/devuser/git/MyDotFiles
+RUN git clone https://github.com/deanandreakis/MyDotFiles.git /home/devuser/git/MyDotFiles
+
+# TODO: Add sym links to config files
