@@ -56,3 +56,11 @@ chown -R devuser: /home/devuser/git/MyDotFiles
 RUN git clone https://github.com/deanandreakis/MyDotFiles.git /home/devuser/git/MyDotFiles
 
 # TODO: Add sym links to config files
+RUN ln -s /home/devuser/git/MyDotFiles/.gitconfig ~/.gitconfig
+RUN ln -s /home/devuser/git/MyDotFiles/.p10k.zsh ~/.p10k.zsh
+RUN ln -s /home/devuser/git/MyDotFiles/.tmux.conf ~/.tmux.conf
+RUN rm ~/.zshrc && ln -s /home/devuser/git/MyDotFiles/.zshrc ~/.zshrc
+RUN ln -s /home/devuser/git/MyDotFiles/.config ~/.config
+
+
+
