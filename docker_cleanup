@@ -7,6 +7,7 @@ Notes:
 1. docker ps # lists containers
 2. docker images # lists images
 3. docker build --rm -f Dockerfile -t ubuntu:dean . # builds the image from the Dockerfile
-4. docker run --name devenv -it ubuntu:dean /bin/zsh # creates and starts a container and executes zsh
-5. docker start devenv # start a container
-6. docker exec -it devenv /bin/zsh # attach to running container w/ zsh
+4. docker build --no-cache --rm -f Dockerfile -t ubuntu:dean . # builds the image from the Dockerfile from scratch
+5. docker run --name devenv -it ubuntu:dean /bin/zsh # creates and starts a container and executes zsh
+6. docker start devenv # start a container
+7. docker exec -it devenv /bin/zsh # attach to running container w/ zsh
