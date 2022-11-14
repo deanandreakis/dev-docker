@@ -11,3 +11,5 @@ Notes:
 5. docker run --name devenv -it ubuntu:dean /bin/zsh # creates and starts a container and executes zsh
 6. docker start devenv # start a container
 7. docker exec -it devenv /bin/zsh # attach to running container w/ zsh
+8. docker tag <image_id> ghcr.io/deanandreakis/devcli:latest # tag an image in preparation for github container registry
+9. docker push ghcr.io/deanandreakis/devcli:latest # push to github container registry
