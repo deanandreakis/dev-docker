@@ -61,7 +61,3 @@ RUN ln -s /home/devuser/git/MyDotFiles/.p10k.zsh ~/.p10k.zsh
 RUN ln -s /home/devuser/git/MyDotFiles/.tmux.conf ~/.tmux.conf
 RUN rm ~/.zshrc && ln -s /home/devuser/git/MyDotFiles/.zshrc ~/.zshrc
 RUN ln -s /home/devuser/git/MyDotFiles/.config ~/.config
-
-# Initialize Neovim
-RUN nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
-
