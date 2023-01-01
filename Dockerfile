@@ -27,22 +27,23 @@ RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/instal
 ENV PATH="$PATH:/home/linuxbrew/.linuxbrew/bin"
 
 # Install Editor and CLI tools
-RUN brew install ripgrep 
-RUN brew install neovim 
-RUN brew install tmux 
+RUN brew install ripgrep
+RUN brew install neovim
+RUN brew install tmux
 RUN brew install fzf
 RUN brew install fd openssl wget
+RUN brew install git-delta
 
 # Install Languages
-RUN brew install python 
-RUN brew install perl 
+RUN brew install python
+RUN brew install perl
 RUN brew install rbenv
-RUN brew install ruby-build 
-RUN brew install lua 
-RUN brew install node 
-RUN brew install gcc 
-RUN brew install rust 
-RUN brew install swift 
+RUN brew install ruby-build
+RUN brew install lua
+RUN brew install node
+RUN brew install gcc
+RUN brew install rust
+RUN brew install swift
 RUN brew install kotlin
 
 # Install Fonts
